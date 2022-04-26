@@ -1,0 +1,34 @@
+{
+  "name": "dungeons-laboratory",
+  "version": "1.0.0",
+  "description": "a full stack appication using react, express, and mongoDB",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./server/index.js",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ihoffman117/dungeons-laboratory.git"
+  },
+  "author": "Ian Hoffman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ihoffman117/dungeons-laboratory/issues"
+  },
+  "homepage": "https://github.com/ihoffman117/dungeons-laboratory#readme",
+  "dependencies": {
+    "babel-loader": "^8.2.5",
+    "express": "^4.18.0",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "webpack": "^5.72.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.2"
+  }
+}
