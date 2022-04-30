@@ -22,7 +22,7 @@
     "rules": {
         "no-console": "off",
         "arrow-body-style": ["error", "always"],
-        "react/function-component-definition": ["", {
+        "react/function-component-definition": ["error", {
             "namedComponents": ["function-declaration", "function-expression", "arrow-function"]
         }]
     }
