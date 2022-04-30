@@ -1,10 +1,15 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-
+import {HEADER} from './components/styles.js'
 
 const App = () => {
   return(
-    <h1>HELLO WORLD</h1>
+    <div>
+      <HEADER>
+        <h1>Dungeon  Lab</h1>
+      </HEADER>
+
+    </div>
   )
 }
 
