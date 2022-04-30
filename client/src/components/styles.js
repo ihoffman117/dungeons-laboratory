@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 const HEADER = styled.div`
   height: 100px;
   background: #262626;
@@ -10,6 +9,11 @@ const HEADER = styled.div`
   text-shadow: 1px 1px #fbacac;
   letter-spacing: 5px;
   text-align: center;
-`
+`;
 
-export {HEADER};
+const NAV = styled.div`
+  display: flex;
+  gap: 1rem;
+`;
+
+export { HEADER, NAV };
