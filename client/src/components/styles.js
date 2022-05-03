@@ -9,13 +9,20 @@ const AppDiv = styled.div`
 const HEADER = styled.div`
   height: 100px;
   background: #0e0e0e;
-  color: #be1212;
+  color: #ec2427;
   font-family: 'Tapestry', cursive;
   text-align: center;
   padding: 20px;
-  text-shadow: 1px 1px #fbacac;
+  text-shadow: 1px 1px #89181c;
   letter-spacing: 5px;
   font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+`;
+
+const Logo = styled.img`
+  height: 100%;
 `;
 
 const H1 = styled.h1`
@@ -36,9 +43,29 @@ const NAV = styled.div`
   border-bottom: 1px solid black;
 `;
 
+const NavItem = styled.div`
+  padding: 10px;
+  width: 25%;
+  text-align: center;
+
+  &:hover{
+    background: darkgrey;
+  }
+`;
+
 // Characters page styles
 
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+`;
 
+const Input = styled.input`
+  padding: 5px;
+  margin: 5px;
+`
 
 // Monsters page styles
 
@@ -53,4 +80,4 @@ const NAV = styled.div`
 
 
 
-export { HEADER, NAV, AppDiv, H1, Content };
+export { HEADER, NAV, AppDiv, H1, Content, Logo, NavItem, Form, Input };

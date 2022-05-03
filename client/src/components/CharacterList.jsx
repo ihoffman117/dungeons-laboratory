@@ -1,9 +1,19 @@
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const CharacterList = () => {
+const CharacterList = ({character}) => {
   return (
-    <h1>this is a list of characters page</h1>
+    <div>
+      <h2>{character.name}</h2>
+      <span>Class: {character.class}</span>
+      <span>HP: {character.MaxHp}</span>
+    </div>
   )
  }
 
- export default CharacterList;
+ CharacterList.propTypes = {
+  character: PropTypes.object.isRequired
+}
+
+export default CharacterList;
