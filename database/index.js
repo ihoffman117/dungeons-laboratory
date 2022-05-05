@@ -8,9 +8,18 @@ const characterSchema = new mongoose.Schema({
   class: String,
   ac: Number,
   maxHp: Number,
-  hp: Number
-})
+  hp: Number,
+});
 
 const Character = mongoose.model('Character', characterSchema);
 
-module.exports = Character;
+const encounterSchema = new mongoose.Schema({
+  encounterName: String,
+  monsters: Array,
+  characters: Array,
+});
+
+const Encounter = mongoose.model('Encounter', encounterSchema);
+
+module.exports.Character = Character;
+module.exports.Encounter = Encounter;

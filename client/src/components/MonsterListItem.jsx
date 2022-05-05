@@ -1,25 +1,31 @@
 /* eslint-disable react/forbid-prop-types */
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import MonsterInfo from './MonsterInfo'
+import MonsterInfo from './MonsterInfo';
+import { MonsterLI } from './styles';
 
-
-const MonsterListItem = ({monster}) => {
-
-  const [display, setDisplay] = useState(false)
+const MonsterListItem = ({ monster }) => {
+  const [display, setDisplay] = useState(false);
 
   return (
-    <div role='presentation' onClick={() => {
-      setDisplay(!display);
-    }}>
-      <h2>{monster.name}</h2>
-      { display ? <MonsterInfo index={monster.index}/> : <div/> }
-    </div>
-  )
- }
+    <MonsterLI>
+      <div>
+        <h2
+          role="presentation"
+          onClick={() => {
+            setDisplay(!display);
+          }}
+        >
+          {monster.name}
+        </h2>
+      </div>
+      {display ? <MonsterInfo index={monster.index} /> : <div />}
+    </MonsterLI>
+  );
+};
 
- MonsterListItem.propTypes = {
-  monster: PropTypes.object.isRequired
-}
+MonsterListItem.propTypes = {
+  monster: PropTypes.object.isRequired,
+};
 
 export default MonsterListItem;
