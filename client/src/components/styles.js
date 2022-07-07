@@ -121,6 +121,21 @@ const MonsterSearch = styled.input`
 `;
 
 // Encounters page styles
+const EncounterLI = styled.div`
+  border-bottom: 1px solid black;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+`;
+
+const EncounterCard = styled.div`
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid black;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+`;
 
 // Maps page styles
 
@@ -140,4 +155,6 @@ export {
   MonsterCard,
   MonsterSearch,
   MonstesForm,
+  EncounterLI,
+  EncounterCard,
 };

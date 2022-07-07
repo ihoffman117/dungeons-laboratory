@@ -3,12 +3,13 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import FullEncounter from './FullEncounter';
+import {EncounterLI} from './styles';
 
 const EncountersList = ({ encounter, handleDelete }) => {
   const [show, setShow] = useState(false);
   return (
-    <div>
-      <span>Encounter: {encounter.encounterName}</span>
+    <EncounterLI>
+      <h2>{encounter.encounterName}</h2>
       <button
         type="button"
         onClick={() => {
@@ -26,7 +27,7 @@ const EncountersList = ({ encounter, handleDelete }) => {
         delete
       </button>
       {show ? <FullEncounter encounter={encounter} /> : <div />}
-    </div>
+    </EncounterLI>
   );
 };
 

@@ -21,7 +21,7 @@ const EncounterCreate = ({ closeModal }) => {
     <div>
       <h1> - Create An Encounter! - </h1>
       <Form>
-        <label htmlFor="Encounter Name">
+        <label htmlFor="EncounterName">
           <Input
             type="text"
             onChange={(event) => {
