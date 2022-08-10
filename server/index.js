@@ -24,20 +24,16 @@ app.delete('/characters', (req, res) => {
 });
 
 app.get('/monsters', (req, res) => {
+
   axios
     .get(`${api}/monsters`)
     .then((response) => {
-      if (!req.query.name) {
-        res.send(response.data.results);
-        return;
+      const monsters = []
+      const {page} = req.query
+      for (let i = page * 20 - 20; i <  page * 20; i += 1){
+        monsters.push(response.data.results[i])
       }
-      const results = [];
-      response.data.results.forEach((monster) => {
-        if (monster.name.contains(req.query.name)) {
-          results.push(monster);
-        }
-      });
-      res.send(results);
+      res.send(monsters)
     })
     .catch((err) => {
       res.send(err);

@@ -14,7 +14,7 @@ import Maps from './components/Maps';
 import logo from './images/logo.png';
 
 const App = () => {
-  const [pageDisplayed, setPageDisplayed] = useState('encounters');
+  const [pageDisplayed, setPageDisplayed] = useState('monsters');
 
   const handleChangePage = (page) => {
     setPageDisplayed(page);
